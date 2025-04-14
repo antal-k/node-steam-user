@@ -195,6 +195,7 @@ class SteamUserLogon extends SteamUserMachineAuth {
 				}
 			}
 
+			/*
 			let files = await this._readFiles(filenames);
 
 			files.forEach((file) => {
@@ -209,6 +210,7 @@ class SteamUserLogon extends SteamUserMachineAuth {
 					machineID = file.contents;
 				}
 			});
+			*/
 
 			// Machine auth token (only necessary if logging on with account name and password)
 			if (!anonLogin && !this._machineAuthToken && this._logOnDetails.account_name) {

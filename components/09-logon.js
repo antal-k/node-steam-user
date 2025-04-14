@@ -95,6 +95,7 @@ class SteamUserLogon extends SteamUserMachineAuth {
 					client_os_type: Number.isInteger(details.clientOS) ? details.clientOS : Helpers.getOsType(),
 					anon_user_target_account_name: !anonLogin ? undefined : 'anonymous',
 					ui_mode: undefined,
+					cell_id: details.cell_id,
 					chat_mode: 2, // enable new chat
 					web_logon_nonce: details.webLogonToken && details.steamID ? details.webLogonToken : undefined,
 					_steamid: details.steamID,
@@ -274,7 +275,7 @@ class SteamUserLogon extends SteamUserMachineAuth {
 
 		let getCmListQueryString = {
 			format: 'vdf',
-			cellid: '0'
+			// cellid: '0'
 		};
 
 		if (this._logOnDetails.cell_id) {
